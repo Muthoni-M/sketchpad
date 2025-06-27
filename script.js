@@ -21,7 +21,10 @@ function createGrid(size) {
 
         // Add drawing effect
         square.addEventListener("mouseover", function () {
-            square.style.backgroundColor = "grey";
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         });
 
         container.appendChild(square);
